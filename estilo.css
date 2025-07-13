@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e8dada;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 5%;
+}
+
+.container {
+  background-color: #1F253D;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cabecera {
+  text-align: center;
+  position: relative;
+}
+
+.cabecera::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/fondo_cabecera_cv.png');
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.contenedor_foto_perfil {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border: 7px solid #5106e8;
+  margin: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor_foto_perfil img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nombre_puesto {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1%;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+header h1,
+header h2,
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3em;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 1.5em;
+  opacity: 0.8;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+h3 i {
+  font-size: 0.9em;
+  margin-right: 8px;
+  color: #5106e8;
+  background: #fff;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+h4 {
+  font-size: 1.1em;
+  margin-top: 15px;
+}
+
+.contenido_cv {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+section {
+  background-color: #2A2F4F;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  flex: 1 1 45%;
+}
+
+section.perfil {
+  flex: 1 1 100%;
+}
+
+section.contacto ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+section.contacto li {
+  margin-bottom: 8px;
+}
+
+section.contacto a {
+  color: #58d1bc;
+  text-decoration: none;
+}
+
+section.contacto a:hover {
+  text-decoration: underline;
+}
+
+.carta_presentacion {
+  text-align: justify;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.nombre_empresa {
+  font-weight: bold;
+  color: #58d1bc;
+}
+
+.año_puesto {
+  text-align: right;
+  opacity: 0.8;
+}
+
+.descripcion_puesto {
+  margin-top: 8px;
+  text-align: justify;
+  line-height: 1.4;
+}
+
+/* Experiencia Laboral */
+.experiencia-laboral .experiencia-item {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.experiencia-item h4 {
+  display: inline-block;
+}
+
+.experiencia-item .nombre_empresa,
+.experiencia-item .año_puesto {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+}
+
+.experiencia-item .año_puesto {
+  text-align: right;
+}
+
+.experiencia-item .descripcion_puesto {
+  margin-top: 6px;
+}
+
+/* Botón GitHub (si lo vuelves a usar) */
+.btn-github {
+  display: inline-block;
+  background-color: #24292e;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-github:hover {
+  background-color: #444c56;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    margin: 2%;
+  }
+  .container {
+    width: 100%;
+  }
+  .contenido_cv {
+    flex-direction: column;
+    padding: 10px;
+  }
+  section {
+    flex: 1 1 100%;
+    margin: 5px 0;
+  }
+  .contenedor_foto_perfil {
+    margin: 10px auto;
+    display: block;
+  }
+  .nombre_puesto {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  .experiencia-item .nombre_empresa,
+  .experiencia-item .año_puesto {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 2px 0;
+  }
+}
